@@ -31,32 +31,27 @@
         </section>
 
         <section class="flex-item">
-            <form action="#" method="POST">
+            <form id="bakeryForm" action="#" method="POST">
                 <fieldset>
                     <legend>Bakery Inquiry Form</legend>
 
                     <label for="fullName">Full Name:</label><br>
-                    <input type="text" id="fullName" name="fullName" required><br><br>
+                    <input type="text" id="fullName" name="fullName"><br>
+                    <div id="nameError" class="error-msg"></div>
 
                     <label for="emailAddr">Email Address:</label><br>
-                    <input type="email" id="emailAddr" name="emailAddr" required><br><br>
+                    <input type="email" id="emailAddr" name="emailAddr"><br>
+                    <div id="emailError" class="error-msg"></div>
 
                     <label for="requestType">Request Type:</label><br>
-                    <select id="requestType" name="requestType" required>
+                    <select id="requestType" name="requestType">
                         <option value="">-- Please Select --</option>
                         <option value="preorder">Pre-Order</option>
                         <option value="general">General Question</option>
-                        <option value="event">Event Catering</option>
                     </select><br><br>
 
                     <label for="pickupDate">Requested Pickup Date (if applicable):</label><br>
                     <input type="date" id="pickupDate" name="pickupDate"><br><br>
-
-                    <label for="itemDetails">Item Details or Message:</label><br>
-                    <textarea id="itemDetails" name="itemDetails" rows="4" cols="40" required></textarea><br><br>
-
-                    <label for="allergies">Allergy Notes (if applicable):</label><br>
-                    <input type="text" id="allergies" name="allergies" placeholder="e.g. nut allergy, gluten sensitivity"><br><br>
 
                     <button type="submit">Submit Request</button>
                 </fieldset>
@@ -68,5 +63,6 @@
 <footer>
     <p>&copy; 2026 North Star Bakery. Baked with love in our neighborhood.</p>
 </footer>
+<script src="script.js"></script>
 </body>
 </html>
