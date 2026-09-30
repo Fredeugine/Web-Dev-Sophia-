@@ -1,0 +1,161 @@
+/* Mobile-First Base Styles */
+body {
+    background-color: #fdfbf7; /* Cream/Off-white for warm bakery feel */
+    color: #333333; /* Dark gray for high contrast readability */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3, legend {
+    font-family: 'Georgia', serif;
+    color: #d4813a; /* Warm baked orange */
+}
+
+/* Header & Navigation */
+header {
+    background-color: #4a3b32; /* Dark brown */
+    padding: 1rem;
+    text-align: center;
+}
+
+header img {
+    max-width: 150px;
+    height: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    display: flex;
+    flex-direction: column; /* Mobile: Stack links vertically */
+    gap: 10px;
+}
+
+nav ul li a {
+    color: #fdfbf7;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+nav ul li a:hover {
+    background-color: #d4813a;
+}
+
+/* Main Content Layout */
+main {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+section {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+img, video, picture {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+figure {
+    margin: 20px 0;
+    text-align: center;
+}
+
+figcaption {
+    font-style: italic;
+    color: #666666;
+    margin-top: 8px;
+}
+
+/* Form Styles */
+fieldset {
+    border: 2px solid #d4813a;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #d4813a;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #4a3b32;
+}
+
+/* Footer */
+footer {
+    background-color: #4a3b32;
+    color: #fdfbf7;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+/* Flexbox Layouts for Content */
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* --- Media Query for Larger Screens (Tablets & Desktop) --- */
+@media (min-width: 768px) {
+    /* Change nav to horizontal row */
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    /* Change specific sections to side-by-side flex layout */
+    .flex-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .flex-item {
+        flex: 1;
+    }
+
+    button {
+        width: auto;
+    }
+}
